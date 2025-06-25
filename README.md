@@ -6,6 +6,7 @@ select * from walmart;
 desc walmart;
 drop table walmart;
 
+
 ------------------- Feature Engineering -----------------------------
 1. Time_of_day
 
@@ -55,6 +56,8 @@ SET month_name = MONTHNAME(date);
 
 
 select * from walmart;
+
+
 ----------------Exploratory Data Analysis (EDA)----------------------
 
 -- 1.How many distinct cities are present in the dataset?
@@ -111,6 +114,8 @@ group by gender,product_line  order by total_gender desc;
 select product_line, round(avg(rating),2) as avg_rating 
 from walmart group by product_line order by avg_rating desc;
 
+
+
 ----- ---------------------Sales Analysis
 -- 1.Number of sales made in each time of the day per weekday
 select * from walmart;
@@ -128,6 +133,8 @@ group by city order by highest_tax desc;
 -- 4.Which customer type pays the most in VAT?
 select customer_type, sum(tax) as highest_tax from walmart
 group by customer_type order by highest_tax desc limit 1;
+
+
 
 -- -------------------Customer Analysis
 
