@@ -8,7 +8,6 @@ select * from walmart;
 
 desc walmart;
 
-drop table walmart;
 
 
 
